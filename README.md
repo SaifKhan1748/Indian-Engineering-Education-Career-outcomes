@@ -171,29 +171,3 @@ streamlit run app/app.py
 | AICTE Dashboard | Branch-wise approved intake 2010–2024 | aicte-india.org |
 | NIRF Rankings | Institution-level placement %, median salary | nirfindia.org |
 | data.gov.in | State education datasets | data.gov.in |
-
-To replace the simulated data with real AISHE data: download the AISHE 2022-23 Excel, map columns to the schema in this notebook, and the cleaning code runs as-is since it handles the same inconsistencies present in the actual reports.
-
----
-
-## What I Would Do Next
-
-- Pull actual NIRF placement Excel files (2019–2023 are public) and replace salary simulations  
-- Add state-wise choropleth map using Folium — employability varies 3× between Karnataka and Bihar  
-- LinkedIn alumni scrape to track actual role shifts 5 years post-graduation  
-- Separate model for salary prediction (currently only placement is modeled)
-
----
-
-## Interview One-liner
-
-*"I found that internships and college tier together predict placement better than CGPA alone — and that the 42% salary premium for CS over Mechanical fully explains why branch enrollment has been migrating to CSE since 2010."*
-
----
-
-## Resume Bullet Points
-
-- Cleaned 56K-row engineering dataset with 25+ dirty category variants, mixed salary units, and scale errors using pandas; reduced null count by 73%  
-- Built XGBoost placement classifier (ROC-AUC 0.82, 5-fold CV) with SHAP explainability; found college tier and internship count outrank CGPA as placement predictors  
-- Identified 42% salary premium for CS branches over core engineering through t-test validated analysis (p < 0.001), quantifying the enrollment migration trend  
-- Forecasted annual placement rate to 2028 using Holt-Winters; COVID dip measured at −8pp, post-2022 recovery confirmed  
